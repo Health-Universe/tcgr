@@ -1,4 +1,5 @@
 # app.py
+import os
 import gradio as gr
 
 
@@ -16,4 +17,4 @@ iface = gr.Interface(
 )
 
 if __name__ == "__main__":
-    iface.launch(server_name="0.0.0.0")
+    iface.launch(server_name="0.0.0.0", root_path=os.environ.get("ROOT_PATH"))
